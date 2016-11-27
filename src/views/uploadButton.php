@@ -1,5 +1,5 @@
 <?php
-/** @var \dosamigos\fileupload\FileUpload $this */
+/** @var \vaszloy\fileupload\FileUpload $this */
 /** @var string $input the code for the input */
 ?>
 
