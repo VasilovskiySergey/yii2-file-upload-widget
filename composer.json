@@ -11,7 +11,7 @@
     ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
-    "homepage": "https://github.com/2amigos/yii2-file-upload-widget",
+    "homepage": "https://github.com/vaszloy/yii2-file-upload-widget",
     "authors": [
         {
             "name": "Alexander Kochetov",
@@ -36,7 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dosamigos\\fileupload\\": "src"
+            "vaszloy\\fileupload\\": "src"
         }
     },
     "extra": {
