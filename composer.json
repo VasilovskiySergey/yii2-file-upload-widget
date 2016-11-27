@@ -12,19 +12,6 @@
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "homepage": "https://github.com/vaszloy/yii2-file-upload-widget",
-    "authors": [
-        {
-            "name": "Alexander Kochetov",
-            "email": "creocoder@gmail.com",
-            "role": "Developer"
-        },
-        {
-            "name": "2amigOS! Consulting Group",
-            "email": "hola@2amigos.us",
-            "homepage": "http://2amigos.us",
-            "role": "Developer"
-        }
-    ],
     "require": {
         "yiisoft/yii2": "~2.0.0",
         "yiisoft/yii2-bootstrap": "~2.0.0",
