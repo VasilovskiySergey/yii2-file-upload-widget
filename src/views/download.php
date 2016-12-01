@@ -10,23 +10,15 @@
             </span>
         </td>
         <td>
-            <p class="name">
-                {% if (file.url) { %}
-                    <a href="{%=file.url%}" title="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
-                {% } else { %}
-                    <span>{%=file.name%}</span>
-                {% } %}
-                
-                {% if (file.input) { %}
-                    <input type="hidden" name="{%=file.input%}" value="{%=file.new_name%}" >
-                {% } %}
-            </p>
+            {% if (file.name) { %}
+                <span>{%=file.name%}</span>
+            {% } %}
+            {% if (file.input) { %}
+                <input type="hidden" name="{%=file.input%}" value="{%=file.new_name%}" >
+            {% } %}
             {% if (file.error) { %}
                 <div><span class="label label-danger"><?= Yii::t('fileupload', 'Error') ?></span> {%=file.error%}</div>
             {% } %}
-        </td>
-        <td>
-            <span class="size">{%=o.formatFileSize(file.size)%}</span>
         </td>
         <td>
             {% if (file.deleteUrl) { %}
@@ -45,4 +37,6 @@
     </tr>
 {% } %}
 
+
 </script>
+
