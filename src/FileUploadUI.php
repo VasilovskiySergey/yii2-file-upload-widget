@@ -23,6 +23,8 @@ class FileUploadUI extends BaseUpload
 {
     public $model_id;
 
+    public $desc;
+    
     public $get;
     /**
      * @var bool whether to use the Bootstrap Gallery on the images or not
