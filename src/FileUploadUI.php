@@ -21,6 +21,9 @@ use yii\helpers\Json;
  */
 class FileUploadUI extends BaseUpload
 {
+    public $model_id;
+
+    public $get;
     /**
      * @var bool whether to use the Bootstrap Gallery on the images or not
      */
@@ -114,6 +117,23 @@ class FileUploadUI extends BaseUpload
             }
         }
         $view->registerJs(implode("\n", $js));
+
+        if ($this->model_id) {
+            $view->registerJs("
+                $.ajax({
+                  type: 'post',
+                  url: 'get-images',
+                  data: {
+                    'model' : " . $this->model_id . ",
+                  },
+                  success: function(data){
+                    if(data){
+                        $('.files').append(data);
+                    }
+                  }
+                });
+            ");
+        }
 
         if ($this->load) {
             $view->registerJs("
