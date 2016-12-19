@@ -5,7 +5,7 @@
         <td>
             <span class="preview">
                 {% if (file.thumbnailUrl) { %}
-                    <a href="{%=file.url%}" title="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                    <a href="{%=file.url%}" target="_blank" title="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
                 {% } %}
             </span>
         </td>
@@ -13,8 +13,13 @@
             {% if (file.name) { %}
                 <span>{%=file.name%}</span>
             {% } %}
+        </td>
+        <td>
             {% if (file.input) { %}
                 <input type="hidden" name="{%=file.input%}" value="{%=file.new_name%}" >
+            {% } %}
+            {% if (file.input2) { %}
+                <textarea rows="5" cols="45" name="{%=file.input2%}" placeholder="Описание картинки"></textarea>
             {% } %}
             {% if (file.error) { %}
                 <div><span class="label label-danger"><?= Yii::t('fileupload', 'Error') ?></span> {%=file.error%}</div>
